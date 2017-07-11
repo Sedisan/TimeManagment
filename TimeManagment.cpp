@@ -34,9 +34,7 @@ T loadValidOriginalVariable(T &arg,Rest&...rest)
 	do {
 		
 
-		//va_list args1;
-		//va_start(args1,arg);
-
+	
 		std::cin >> arg;
 		if (std::cin)break;
 		if (!std::cin) { 
@@ -61,39 +59,14 @@ void menu(int &decision)
 	
 	std::lock_guard <std::mutex> lock(lck);
 
-	//FILE * fp;
-	//errno_t err = fopen_s(&fp, SLOW_WRITINGWITHTXT, "w+");
 
 	std::string  text= "Which option do you choose ?\n1.Add today activity\n";
 	text += "2.Browse history\n";
 	text += "3.Settings";
-	//if (err) { std::perror("Error while writing"); }
-	//char * pTextChar = new char[text.length()+1];
+
 	Settings::writeOnTheScreenText(text);
 
-	//std::cout << "PtextChar: " << pTextChar << '\n';
 
-
-	//fputs(pTextChar, fp);
-	//delete[] pTextChar;
-	//fclose(fp);
-	//FILE * filePointer;
-	//errno_t errNO = fopen_s(&filePointer, SLOW_WRITING, "r");
-	/*
-	int _cdecl c;
-	while ((c = std::fgetc(filePointer)) != EOF) {
-
-		//std::cout << "Halo" << '\n';
-
-		std::putchar(c);
-		
-
-	}
-	
-	_fcloseall();
-
-
-	*/
 	while (std::cin) {
 
 		loadValidOriginalVariable(decision);
@@ -107,7 +80,7 @@ void menu(int &decision)
 void redict(DateFile *fp, std::string nameOfFile);
 bool stillInserter();
 int getSizeOfTable();
-int main()
+auto main()->int
 {
 
 
@@ -115,7 +88,7 @@ int main()
 	while (true) {
 
 
-		//_No_competing_thread_begin_;
+		
 		int decision = NULL;
 
 
@@ -131,12 +104,12 @@ int main()
 		thrForAbstract.join();
 		mtx.lock();
 		std::vector<std::string> vecString;
-		///Here thread
+		
 		DateFile *fp;
 
 		std::string spendTime;
 		std::string nameOfFile = ActualData::returnActualDate();
-		///End of thread
+		
 
 
 
@@ -167,8 +140,7 @@ int main()
 			RealFile realFile;
 			saveToFile.act(nameOfFile, fullStringText);
 
-			//fp = &saveToFile;
-			//fp->act(nameOfFile);
+			
 			fp = &realFile;
 			auto n = [&]()
 			{
