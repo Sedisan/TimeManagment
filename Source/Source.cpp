@@ -12,8 +12,9 @@
 #include <regex>
 #include <string>
 #include <thread>
-#include "Date.h"
-#include "Header.h"
+#include "Header/Header.h"
+#include "Header/Date.h"
+#include "Header/Browse.h"
 #define BASEALLRECORDWITHTXT "BASE.txt"
 #define SETTINGSWITHTXT "SETTINGS.txt"
 

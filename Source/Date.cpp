@@ -10,8 +10,9 @@
 #include <cstdio>
 #include <cctype>
 #include <ctime>
-#include "Date.h"
-#include "Header.h"
+#include "Header/Header.h"
+#include "Header/Date.h"
+#include "Header/Browse.h"
 
 #define DUMP "DUMP"
 #define TEMP "TEMP"

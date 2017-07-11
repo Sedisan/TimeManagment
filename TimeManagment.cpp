@@ -1,7 +1,7 @@
 // TimeManagment.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+#include "stdafx.h"///For Visual Studio
 #include <iostream>
 #include <vector>
 #include <ctime>
@@ -11,9 +11,9 @@
 #include <string>
 #include <map>
 #include <exception>
-#include "Header.h"
-#include "Date.h"
-#include "Browse.h"
+#include "Header/Header.h"
+#include "Header/Date.h"
+#include "Header/Browse.h"
 #define SLOW_WRITINGWITHTXT "SLOW_WRITING.txt"
 #define CAPABILITES 3
 

@@ -5,8 +5,9 @@
 #include <map>
 #include <thread>
 #include <chrono>
-#include "Browse.h"
-#include "Header.h"
+#include "Header/Header.h"
+#include "Header/Date.h"
+#include "Header/Browse.h"
 #define DaysLimit 20
 std::string getNameOfBASEWITHALLRECORD();
 void BrowseHistory::show()
